@@ -1,0 +1,58 @@
+<html>
+<style>
+#container{
+width:500px;
+height:500px;
+position:relative;
+background-color:yellow;
+}
+#animate{
+width:50px;
+height:50px;
+position:absolute;
+background-color:Red;
+}
+</style>
+
+<body onload="myfunc()">
+<div id="s">
+<p>lkasdlkaskdn</p>
+</div>
+
+<div id="container">
+<div id="animate"></div>
+</div></br>
+
+
+<script>
+var w=window.screen.availWidth;
+var h=window.screen.colorDepth;
+document.getElementById("s").innerHTML="width:" + w + " " + "height:" + h + navigator.appName;
+
+var x=document.createElement("p");
+var y=document.createTextNode("fuck off!!");
+x.appendChild(y);
+var z=document.body;
+z.appendChild(x);
+
+function myfunc(){
+var x = document.getElementById("animate");
+var pos=0;
+var id=setInterval(mov,12);
+function mov(){
+if(pos==400)
+clearInterval();
+else
+{
+pos++;
+x.style.top=pos + "px";
+x.style.left=pos +"px";
+}
+}
+}
+
+
+
+</script>
+</body>
+</html>
